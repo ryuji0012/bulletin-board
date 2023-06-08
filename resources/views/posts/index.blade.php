@@ -14,8 +14,8 @@
                     <h2>件名</h2>
                     <p class='body'>{{ $post->body }}</p>
                     <h2 class='title'>{{ $post->title }}</h2>
-                    <a href='/posts/create'>create</a>
-                    <h2 class='title'>
+                    <a href='/posts/create'>投稿画面</a>
+                    <h2 class='プロフィール'>
                     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                     </h2>
                 </div>
