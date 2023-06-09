@@ -19,6 +19,10 @@
                 <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
             </div>
             <input type="submit" value="投稿"/>
+             <x-app-layout>
+    <x-slot name="header">
+    </x-slot>
+    </x-app-layout>   
         </form>
         <div class="back">[<a href="/">back</a>]</div>
     </body>

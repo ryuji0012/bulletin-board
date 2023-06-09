@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
+<hnavi  <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Posts</title>
@@ -13,8 +12,12 @@
         </h1>
         <div class="content">
             <div class="content__post">
-                <h3>本文</h3>
-                <p>{{ $post->body }}</p>    
+                <h3>プロフィール設定</h3>
+                <p>{{ $post->body }}</p>
+                <x-app-layout>
+        <x-slot name="header">
+        </x-slot>
+    </x-app-layout>
             </div>
         </div>
         <div class="footer">

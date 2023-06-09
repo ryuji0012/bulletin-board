@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>Blog</title>
+        <title>お悩み掲示板</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
@@ -11,13 +11,13 @@
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
-                    <h2>件名</h2>
-                    <p class='body'>{{ $post->body }}</p>
-                    <h2 class='title'>{{ $post->title }}</h2>
                     <a href='/posts/create'>投稿画面</a>
-                    <h2 class='プロフィール'>
+                    <a href=>プロフィール</a>
                     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
-                    </h2>
+                   <x-app-layout>
+    <x-slot name="header">
+    </x-slot>
+    </x-app-layout>             
                 </div>
             @endforeach
         </div>
