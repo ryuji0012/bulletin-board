@@ -5,7 +5,8 @@
         <title>Blog</title>
     </head>
     <body>
-        <h1>お悩み掲示板</h1>
+        <x-app-layout>
+        <h1>投稿内容</h1>
         <form action="/posts" method="POST">
             @csrf
             <div class="title">
@@ -19,11 +20,10 @@
                 <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
             </div>
             <input type="submit" value="投稿"/>
-             <x-app-layout>
     <x-slot name="header">
     </x-slot>
-    </x-app-layout>   
         </form>
-        <div class="back">[<a href="/">back</a>]</div>
+        <div class="back">[<a href="/">戻る</a>]</div>
+        </x-app-layout>
     </body>
 </html>
