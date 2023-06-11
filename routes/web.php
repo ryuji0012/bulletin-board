@@ -25,6 +25,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/', [PostController::class, 'index'])->name('index');
     Route::get('/posts/create', [PostController::class, 'create']);
+    Route::post('/posts/comment_post', [PostController::class,'/comment_post']);
     Route::get('/posts/{post}', [PostController::class, 'show']);
     Route::post('/posts', [PostController::class, 'store']);
     Route::delete('/posts/{post}', [PostController::class,'delete']);

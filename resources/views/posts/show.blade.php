@@ -21,9 +21,14 @@
         <div class="footer">
             <a href="/">戻る</a>
             <h1>コメント欄</h1>
+            <form action="/posts/comment_post" method="POST">
+            @csrf
             <input type="text" name="post[title]" placeholder="人間関係の悩みについて" value="{{ old('post.title') }}"/>
             <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
-            <button type="button" onclick="deletePost({{ $post->id }})">コメントをする</button>
+            <input type="submit" value="comment"/>
+            <p>いいね</p>
+            <h2>投稿日時</h2>
+            </form>
         </div>
          </x-app-layout>
     </body>

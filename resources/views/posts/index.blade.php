@@ -19,7 +19,7 @@
                     <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
                         @csrf
                         @method('DELETE')
-                        <button type="button" onclick="deletePost({{ $post->id }})">削除</button> 
+                    <button type="button" onclick="deletePost({{ $post->id }})">削除</button> 
                 </form>
     <x-slot name="header">
     </x-slot>

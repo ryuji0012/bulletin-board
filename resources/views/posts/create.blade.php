@@ -10,7 +10,8 @@
         <form action="/posts" method="POST">
             @csrf
             <div class="title">
-                <h2>件名</h2>
+            　　<h1>名前</h1><button>匿名にする</button>
+            　　<h2>件名</h2>
                 <input type="text" name="post[title]" placeholder="タイトル" value="{{ old('post.title') }}"/>
                 <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
             </div>
@@ -24,6 +25,7 @@
     </x-slot>
         </form>
         <div class="back">[<a href="/">戻る</a>]</div>
+        <button>カテゴリー</button>
         </x-app-layout>
     </body>
 </html>

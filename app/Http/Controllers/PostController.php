@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Http\Requests\PostRequest; // useする
+use App\Models\Comment; 
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
@@ -34,4 +36,11 @@ class PostController extends Controller
     $post->delete();
     return redirect('/');
    }
+   
+   public function comment_post(Comment $comment,Request $request)
+   {
+        $input = $request['post'];
+        $comment->fill($input)->save();
+        return redirect('/posts');
+    }
 }
