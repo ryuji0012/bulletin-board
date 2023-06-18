@@ -12,6 +12,7 @@
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
+
                     <a href='/posts/create'>投稿画面</a>
                     <a href="/profile">プロフィール</a>
                     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>

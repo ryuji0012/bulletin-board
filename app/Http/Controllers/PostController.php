@@ -41,6 +41,6 @@ class PostController extends Controller
    {
         $input = $request['post'];
         $comment->fill($input)->save();
-        return redirect('/posts');
+        return redirect('/');
     }
 }
